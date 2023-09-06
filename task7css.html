@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #900C3F ;
+    }
+
+    .container {
+      margin: auto;
+      width: 800px;
+      padding: 30px;
+      background-color: #66082D;
+    }
+
+    input[type=text],
+    input[type=password],input[type=tel],input[type=number] {
+      width: 90%;
+      padding: 5px;
+      margin: 5px 0 15px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    input[type=text]:focus,
+    input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    .registerbtn {
+      background-color: #ffffff;
+      color: black;
+      padding: 10px 10px;
+      margin: auto;
+      border: none;
+      cursor: pointer;
+      width: 500px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .registerbtn:hover {
+      opacity: 1;
+    }
+    
+    label {
+      padding-left: 80px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <form action="/action_page.php">
+    <div class="container">
+      <table style="width:200px;margin:auto;">
+        <tr>
+          <td><label for="name"><b>Name:</b></label></td>
+          <td><input type="text" placeholder="Your Name" name="name" id="name" required><br></td>
+        </tr>
+        <tr>
+          <td><label for="email"><b>Email:</b></label></td>
+          <td><input type="text" placeholder="Your Email" name="email" id="email" required><br></td>
+        </tr>
+        <tr>
+          <td><label for="psw"><b>Password:</b></label></td>
+          <td><input type="password" name="psw" id="psw" required><br></td>
+        </tr>
+        <tr>
+          <td><label for="phone"><b>Phone Number:</b></label></td>
+          <td><input type="tel" name="phone" id="phone" required><br></td>
+        </tr>
+        <tr>
+          <td><label for="gender"><b>Gender:</b></label></td>
+          <td><label for="male" style="padding-left:0">Male:</label><input type="radio" id="male" name="gender" value="male">  
+            <label for="female" style="padding-left:0">Female:</label><input type="radio" id="female" name="gender" value="female">
+            <label for="other" style="padding-left:0">Other:</label><input type="radio" id="other" name="gender" value="other">
+          </td>
+        </tr>
+        <tr>
+        <td><label for="lang"><b>Language:</label></td>
+        <td><input list="lang" name="lang" placeholder="Select Language">
+          <datalist id="lang">
+            <option value="English">
+            <option value="Hindi">
+            <option value="Marathi">
+          </datalist>
+        </td>
+      </tr>
+        <tr>
+          <td><label for="zip"><b>Zipcode:</b></label></td>
+          <td><input type="text" name="zip" id="zip" maxlength="6" required><br></td>
+        </tr>
+        <tr>
+        <td><label for="about"><b>About:</label></td>
+        <td><textarea name="about" rows="3" cols="32" placeholder="Write about yourself..."></textarea></td>
+      </tr>
+        <tr>
+          <td colspan="2">
+            <button type="submit" class="registerbtn" taget="_blank">Register</button>
+          </td>
+        </tr>
+        </tabel>
+    </div>
+  </form>
+
+</body>
+
+</html>
